@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Musical Phrase Structure — Hymn Writing Workshop</title>
+<style>
+  :root{
+    --ink:#2a1414;
+    --paper:#fbf6ec;
+    --accent:#7a1f2b;
+    --accent2:#205c41;
+    --gold:#c2972f;
+    --line:#dccfa6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:Georgia, 'Times New Roman', serif;
+    line-height:1.55;
+  }
+  header{
+    background:var(--accent);
+    color:var(--paper);
+    padding:36px 20px 28px;
+    text-align:center;
+    border-bottom:5px solid var(--gold);
+  }
+  header h1{
+    margin:0 0 6px;
+    font-size:2rem;
+    letter-spacing:0.5px;
+    color:#f7ecd2;
+  }
+  header p{
+    margin:0;
+    font-size:1rem;
+    color:var(--gold);
+    font-style:italic;
+  }
+  main{
+    max-width:780px;
+    margin:0 auto;
+    padding:30px 22px 70px;
+  }
+  section{
+    margin-bottom:42px;
+  }
+  h2{
+    color:var(--accent);
+    border-bottom:2px solid var(--line);
+    padding-bottom:6px;
+    font-size:1.4rem;
+  }
+  h3{
+    color:var(--accent2);
+    font-size:1.1rem;
+    margin-top:28px;
+  }
+  .lead{
+    font-size:1.1rem;
+    max-width:640px;
+  }
+  .box{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:18px 20px;
+    margin:18px 0;
+  }
+  .tip{
+    background:#f3ead2;
+    border-left:5px solid var(--gold);
+    border-radius:6px;
+    padding:14px 18px;
+    margin:18px 0;
+    font-size:0.97rem;
+  }
+  .tip strong{color:var(--accent);}
+
+  /* bar diagrams */
+  .bars{
+    display:flex;
+    gap:6px;
+    margin:14px 0;
+    flex-wrap:wrap;
+  }
+  .bar{
+    flex:1 0 40px;
+    min-width:40px;
+    height:46px;
+    background:#eee3c7;
+    border:1px solid var(--gold);
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:0.8rem;
+    font-weight:bold;
+    color:var(--ink);
+  }
+  .bar.a{background:#e3c9c3;border-color:var(--accent);}
+  .bar.aprime{background:#e3c9c3;border-color:var(--accent);background:repeating-linear-gradient(45deg,#e3c9c3,#e3c9c3 6px,#ecd9d4 6px,#ecd9d4 12px);}
+  .bar.b{background:#cddccd;border-color:var(--accent2);}
+  .phrase-label{
+    font-size:0.85rem;
+    color:#665f4f;
+    margin-top:-6px;
+    margin-bottom:4px;
+  }
+  .group{
+    margin-bottom:20px;
+  }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:16px 0;
+    font-size:0.95rem;
+  }
+  th,td{
+    border:1px solid var(--line);
+    padding:8px 10px;
+    text-align:left;
+  }
+  th{
+    background:#eee3c7;
+    color:var(--ink);
+  }
+
+  .activity{
+    background:#eef1e8;
+    border:1px dashed var(--accent2);
+    border-radius:10px;
+    padding:18px 20px;
+    margin:20px 0;
+  }
+  .activity h3{margin-top:0;color:var(--accent2);}
+  .activity ol{padding-left:22px;}
+
+  footer{
+    text-align:center;
+    color:#8b8266;
+    font-size:0.85rem;
+    padding:20px;
+  }
+
+  .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0;}
+  .pill{
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:20px;
+    padding:5px 14px;
+    font-size:0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Building a Hymn: Phrase Structure</h1>
+  <p>A short guide for writing tunes that feel balanced and singable</p>
+</header>
+
+<main>
+
+<section>
+  <p class="lead">Every good hymn tune is built out of small, organised chunks of music called <strong>phrases</strong>. Before you start writing your own tune, it helps to understand how phrases are normally grouped — because almost every hymn you've ever sung follows the same basic blueprint.</p>
+  <div class="pillrow">
+    <span class="pill">4-bar phrases</span>
+    <span class="pill">8-bar sentences</span>
+    <span class="pill">16-bar tunes</span>
+    <span class="pill">repetition</span>
+    <span class="pill">cadences</span>
+  </div>
+</section>
+
+<section>
+  <h2>1. The 4-Bar Phrase</h2>
+  <p>The basic building block of almost all hymn tunes is the <strong>4-bar phrase</strong> — a short musical idea, a bit like a single line of poetry. It usually ends with some sense of pause or punctuation, even if it's not a full stop.</p>
+  <div class="bars">
+    <div class="bar">1</div>
+    <div class="bar">2</div>
+    <div class="bar">3</div>
+    <div class="bar">4</div>
+  </div>
+  <p class="phrase-label">One phrase = one breath, roughly one line of a hymn verse.</p>
+  <div class="tip"><strong>Singer's test:</strong> if you can sing a 4-bar phrase in one comfortable breath, it's probably the right length.</div>
+</section>
+
+<section>
+  <h2>2. The 8-Bar Sentence</h2>
+  <p>Two 4-bar phrases joined together make an <strong>8-bar musical sentence</strong> — the standard length of a hymn verse line-pair, and often the whole structure underneath a verse of text. The first phrase usually feels "open" (like a comma), and the second phrase feels "closed" (like a full stop).</p>
+  <div class="bars">
+    <div class="bar a">1</div>
+    <div class="bar a">2</div>
+    <div class="bar a">3</div>
+    <div class="bar a">4</div>
+    <div class="bar b">5</div>
+    <div class="bar b">6</div>
+    <div class="bar b">7</div>
+    <div class="bar b">8</div>
+  </div>
+  <p class="phrase-label">Phrase A (open, comma feel) + Phrase B (closed, full-stop feel) = one sentence</p>
+
+  <h3>Repetition with a small change at the end</h3>
+  <p>A very common — and very effective — trick is to make the second phrase <em>start the same way</em> as the first, then change the ending so it lands more firmly. Musicians call this a <strong>repeated phrase with a varied cadence</strong>, and it's one of the easiest ways to make a tune feel unified without sounding repetitive.</p>
+  <div class="bars">
+    <div class="bar a">1</div>
+    <div class="bar a">2</div>
+    <div class="bar a">3</div>
+    <div class="bar a">4</div>
+    <div class="bar aprime">1'</div>
+    <div class="bar aprime">2'</div>
+    <div class="bar aprime">3'</div>
+    <div class="bar b">4'</div>
+  </div>
+  <p class="phrase-label">A — A' (same opening, different/stronger ending). The striped bar shows where the change happens.</p>
+  <div class="box">
+    <strong>Why this works:</strong> the congregation hears something familiar (the repeated opening), which makes the tune easy to learn — but the changed ending stops it feeling like a loop, and gives the verse a sense of arrival.
+  </div>
+</section>
+
+<section>
+  <h2>3. The 16-Bar Tune</h2>
+  <p>Most complete hymn tunes (matching a 4-line verse) are built from <strong>two 8-bar sentences</strong>, making 16 bars in total. This usually maps onto the classic four-line hymn verse, one phrase per line of text:</p>
+  <div class="bars">
+    <div class="bar a">L1</div>
+    <div class="bar a">L1</div>
+    <div class="bar a">L1</div>
+    <div class="bar a">L1</div>
+    <div class="bar b">L2</div>
+    <div class="bar b">L2</div>
+    <div class="bar b">L2</div>
+    <div class="bar b">L2</div>
+  </div>
+  <div class="bars">
+    <div class="bar a">L3</div>
+    <div class="bar a">L3</div>
+    <div class="bar a">L3</div>
+    <div class="bar a">L3</div>
+    <div class="bar b">L4</div>
+    <div class="bar b">L4</div>
+    <div class="bar b">L4</div>
+    <div class="bar b">L4</div>
+  </div>
+  <p class="phrase-label">Each block of 4 bars = one line of text. Two lines = one sentence (8 bars). Two sentences = the whole tune (16 bars).</p>
+
+  <h3>Common 16-bar shapes</h3>
+  <table>
+    <tr><th>Pattern</th><th>Letters</th><th>Effect</th></tr>
+    <tr><td>Repeating opening</td><td>A A B A</td><td>Very memorable — line 1 returns as line 4, "rounding off" the tune</td></tr>
+    <tr><td>Question &amp; answer</td><td>A B A B'</td><td>Builds a sense of dialogue, with a stronger final cadence</td></tr>
+    <tr><td>Through-composed</td><td>A B C D</td><td>Fresh material each line — needs strong text to justify it; harder to learn by ear</td></tr>
+    <tr><td>Bar form</td><td>A A B</td><td>Two short identical phrases followed by a longer contrasting one (think 8+8 bars)</td></tr>
+  </table>
+  <div class="tip"><strong>Workshop tip:</strong> the <em>A A B A</em> shape is the friendliest place to start. It only requires you to compose two original phrases (A and B) — the rest is repetition or near-repetition.</div>
+</section>
+
+<section>
+  <h2>4. Cadences: How Phrases "Land"</h2>
+  <p>A <strong>cadence</strong> is the musical equivalent of punctuation — it tells the singer whether a phrase is finished or not.</p>
+  <table>
+    <tr><th>Type</th><th>Feels like</th><th>Where to use it</th></tr>
+    <tr><td>Full / perfect cadence</td><td>A full stop — settled, resolved</td><td>End of the whole tune; often end of line 2 (mid-point)</td></tr>
+    <tr><td>Half cadence</td><td>A comma — open, expectant</td><td>End of phrase 1, to pull the ear toward what's next</td></tr>
+    <tr><td>Plagal / "Amen" cadence</td><td>A gentle, soft close</td><td>Occasionally as a final flourish</td></tr>
+  </table>
+  <p>This is exactly why an <strong>A A' </strong> pair works so well: phrase A ends on a half cadence (comma), and A' reuses the same melodic shape but resolves onto a full cadence (full stop).</p>
+</section>
+
+<section>
+  <h2>5. Quick Checklist Before You Start Writing</h2>
+  <div class="box">
+    <ul>
+      <li>Decide how many lines your verse has — this usually decides your tune length (4 lines → 16 bars).</li>
+      <li>Sketch <strong>one</strong> good 4-bar phrase first. Make sure it's singable in a breath.</li>
+      <li>Decide: will line 2 contrast, or repeat-with-a-change?</li>
+      <li>Check each phrase ends with a clear sense of comma or full stop.</li>
+      <li>Look for a chance to bring phrase A back near the end (e.g. as line 4) — it gives listeners something to hold onto.</li>
+      <li>Sing it through. If you run out of breath, your phrase is too long.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="activity">
+  <h3>Workshop Activity (15 minutes)</h3>
+  <ol>
+    <li>In pairs, write a single 4-bar melodic phrase (Phrase A) to the first line of your hymn text.</li>
+    <li>Create Phrase A' by repeating the same opening 2 bars, then changing the last 2 bars to land on a stronger, more "finished" note.</li>
+    <li>Decide whether your next 8 bars (lines 3–4) will introduce a new idea (B) or bring back A.</li>
+    <li>Sing your 16-bar tune as a group. Does it feel balanced? Where does it feel like a comma, and where does it feel like a full stop?</li>
+  </ol>
+</section>
+
+</main>
+
+<section>
+  <h2>6. Chords Within a Key — and Borrowing From Outside It</h2>
+  <p>Once your phrases are mapped out, you need chords to support them. Every major key has seven "home" chords built from its scale — these are the chords that feel like they naturally belong.</p>
+
+  <h3>The chords of a major key</h3>
+  <table>
+    <tr><th>Roman numeral</th><th>Chord quality</th><th>Common nickname</th><th>Typical job</th></tr>
+    <tr><td>I</td><td>Major</td><td>Tonic</td><td>Home. Where phrases resolve / start.</td></tr>
+    <tr><td>ii</td><td>Minor</td><td>Supertonic</td><td>Gentle movement away from home.</td></tr>
+    <tr><td>iii</td><td>Minor</td><td>Mediant</td><td>Softer, more reflective colour.</td></tr>
+    <tr><td>IV</td><td>Major</td><td>Subdominant</td><td>Opens things up; common at phrase starts.</td></tr>
+    <tr><td>V</td><td>Major</td><td>Dominant</td><td>Creates tension; wants to resolve to I.</td></tr>
+    <tr><td>vi</td><td>Minor</td><td>Submediant</td><td>The "relative minor" — wistful, warmer.</td></tr>
+    <tr><td>vii°</td><td>Diminished</td><td>Leading-tone</td><td>Unstable; rarely used alone, pulls strongly to I.</td></tr>
+  </table>
+  <div class="tip"><strong>Rule of thumb:</strong> a satisfying hymn cadence is very often <strong>V → I</strong> (tension, then resolution) or <strong>IV → I</strong> (a softer, "Amen"-style close).</div>
+
+  <h3>Borrowing chords: stepping outside the key</h3>
+  <p>Contemporary hymn writers often reach beyond these seven "home" chords for a moment of colour or surprise. This is called <strong>modal mixture</strong> or <strong>borrowed chords</strong> — taking a chord from a closely related key and dropping it into your progression. It doesn't change the key permanently; it just tints one or two chords.</p>
+
+  <div class="box">
+    <strong>1. Borrowing from the parallel minor</strong><br>
+    Every major key has a "parallel minor" sharing the same home note (e.g. D major and D minor). You can borrow chords from it — most famously the <strong>flattened VI</strong> (♭VI) and <strong>flattened III</strong> (♭III), or a minor <strong>iv</strong> instead of major IV. These give a sudden, slightly melancholy or "emotional" lean, often used to underline a serious lyric (loss, struggle, longing) before returning to the major key.
+  </div>
+
+  <div class="box">
+    <strong>2. Borrowing from a closely related key</strong><br>
+    Keys that are "neighbours" on the circle of fifths (a fifth up or down from your home key) share most of their chords. Slipping in a chord from a neighbouring key — for instance using the V of V (a "secondary dominant") — adds a brief moment of harmonic lift, almost like a key change that doesn't fully commit. This is a favourite contemporary-worship trick at the top of a chorus or going into a bridge.
+  </div>
+
+  <div class="box">
+    <strong>3. Using the relative minor for the whole bridge or verse</strong><br>
+    Rather than borrowing single chords, some sections (often a bridge, as we have here) shift the centre of gravity toward the <strong>relative minor</strong> (vi) for several bars, giving a noticeably more serious or searching mood, before pulling back to the major key for a final chorus. This works well for text about struggle, courage, or waiting, before resolving into joy or certainty.
+  </div>
+
+  <h3>Where borrowed chords work best in a hymn</h3>
+  <table>
+    <tr><th>Moment</th><th>Why borrowing helps</th></tr>
+    <tr><td>Start of a bridge</td><td>Signals "something different is happening" without losing the listener</td></tr>
+    <tr><td>A line about struggle, darkness, or cost</td><td>A minor-borrowed chord can mirror the weight of the words</td></tr>
+    <tr><td>Just before the final chorus</td><td>A secondary dominant can create lift and anticipation</td></tr>
+    <tr><td>A single dramatic word</td><td>One borrowed chord under one word draws the ear to it</td></tr>
+  </table>
+
+  <div class="tip"><strong>Workshop tip:</strong> use borrowed chords sparingly — one or two per tune is usually enough. Too many, and the ear loses its sense of "home"; just the right amount, and it sounds like a deliberate, expressive choice.</div>
+</section>
+
+<section>
+  <h2>7. The Text We're Setting: "William's Way"</h2>
+  <p>This is the hymn text our tune will carry. Notice the shape of each section as you read — where the lines feel like "commas" and where they feel like "full stops," and where the structure might suggest repetition, contrast, or a key change.</p>
+
+  <div class="box">
+    <h3 style="margin-top:0;">Verse 1</h3>
+    <p>We are gathered in your name, every story, every face;<br>
+    You have called us, you have claimed us, in this bright and holy place.<br>
+    So we open up our hands, and we open up our minds;<br>
+    in the love of God we're learning, and it's hope that we will find.</p>
+
+    <h3>Pre-Chorus</h3>
+    <p>We will answer when you call,<br>
+    one in heart and one in aim;<br>
+    there is room enough for all,<br>
+    in the shelter of Your name.</p>
+
+    <h3>Chorus</h3>
+    <p>Love of God and love of people,<br>
+    Love of learning, love of life;<br>
+    we will walk the Way before us,<br>
+    faithful to Christ.<br>
+    Deo Fidelis et Patriae,<br>
+    with the Spirit as our guide;<br>
+    You have named us, You have claimed us,<br>
+    alive in you, alive.</p>
+
+    <h3>Verse 2</h3>
+    <p>Blessed William showed the way, when he stood and would not bend;<br>
+    he was faithful to the Saviour, he was faithful to the end.<br>
+    He had courage in the dark, and for justice he would stand;<br>
+    he took up his cross and followed, with his life within God's hand.</p>
+
+    <h3>Verse 3</h3>
+    <p>At Your table we are fed, and we lift our hearts to You;<br>
+    in the light of Christ we follow, walking close and walking true.<br>
+    In our service, in our silence, in the labour and the praise;<br>
+    for the gift of life you give us, we will love you all our days.</p>
+
+    <h3>Bridge</h3>
+    <p>Hope is rising, courage calling, justice for the poor;<br>
+    service with our hands wide open, stillness at Your door.<br>
+    This is William's Way before us, this the road we run;<br>
+    following the Risen Jesus, until the journey's done.</p>
+  </div>
+
+  <div class="tip"><strong>Discuss before composing:</strong> Verses 1–3 share a length and metre — could they share the same melodic material (A A B A), with the Pre-Chorus, Chorus, and Bridge each given their own contrasting phrase shapes and a moment of borrowed harmony to mark them out?</div>
+</section>
+
+<footer>Hymn-Writing Workshop · Phrase Structure Handout</footer>
+
+</body>
+</html>
